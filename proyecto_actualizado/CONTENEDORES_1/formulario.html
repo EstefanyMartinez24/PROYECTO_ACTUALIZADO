@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Experiencia</title>
+    <link rel="stylesheet" href="../ESTILOS_1/est_formulario.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#">Registrar Experiencia</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Registra tu Experiencia en Ciclismo</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <form id="cyclingForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+                <label for="tipoBicicleta">Tipo de Bicicleta:</label>
+                <input type="text" id="tipoBicicleta" placeholder="Ejemplo: BMX, Montaña" required>
+
+                <label for="nivel">Nivel:</label>
+                <input type="text" id="nivel" placeholder="Ejemplo: Principiante, Avanzado" required>
+
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+
+        <section class="api-section">
+            <h2>Usuarios de la API</h2>
+            <button id="cargarUsuariosBtn">Cargar Usuarios</button>
+            <ul id="usuarios"></ul>
+        </section>
+    </main>
+
+    <script src="../JS_1/formulario.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,226 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #2196F3, #0D47A1);
+    color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Secciones */
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.02);
+}
+
+/* Grid para tipos de ciclismo */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Links de secciones */
+.section-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-link:hover .section {
+    background: #e3f2fd;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #2196F3;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Enlace ciclismo */
+.ciclismo-link {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.ciclismo-link:hover {
+    color: #0D47A1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+    padding: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar ul li:hover {
+    background-color: #555;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Formulario */
+#formContainer {
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* 🌟 RESPONSIVE DESIGN */
+
+/* 📱 Móviles (menos de 600px) */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .grid {
+        display: block; /* Secciones en una sola columna */
+    }
+
+    table {
+        font-size: 14px;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap; /* Evita que las celdas se rompan */
+    }
+}
+
+/* 📲 Tabletas (600px - 1024px) */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 🖥️ Escritorio (más de 1024px) */
+@media screen and (min-width: 1025px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

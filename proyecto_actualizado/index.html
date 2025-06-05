@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclismo</title>
+    <link rel="stylesheet" href="ESTILOS_1/estilos.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#" id="registrarBtn">Registrar Experiencia</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Ciclismo: Pasión sobre Ruedas</h1>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2><a href="CONTENEDORES_1/ciclismo.html" class="ciclismo-link">Ciclismo</a></h2>
+        </section>
+
+        <section class="section">
+            <h2>Tipos de Ciclismo</h2>
+            <p>Existen diferentes tipos de ciclismo, adaptados a diversos terrenos y niveles de dificultad.</p>
+        </section>
+
+        <div class="grid">
+            <a href="CONTENEDORES_1/montaña.html" class="section-link">
+                <section class="section">
+                    <h2>Ciclismo de Montaña</h2>
+                    <p>Se practica en senderos y montañas, con bicicletas diseñadas para terrenos irregulares.</p>
+                </section>
+            </a>
+
+            <a href="CONTENEDORES_1/BMX.html" class="section-link">
+                <section class="section">
+                    <h2>BMX</h2>
+                    <p>El BMX es una modalidad de ciclismo extremo que se practica en pistas y circuitos con acrobacias.</p>
+                </section>
+            </a>
+
+            <a href="CONTENEDORES_1/urbano.html" class="section-link">
+                <section class="section">
+                    <h2>Ciclismo Urbano</h2>
+                    <p>El ciclismo urbano es un medio de transporte eficiente y ecológico dentro de las ciudades.</p>
+                </section>
+            </a>
+        </div>
+
+        <section class="section">
+            <h2>Comparación de Tipos de Ciclismo</h2>
+            <table>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Terreno</th>
+                    <th>Dificultad</th>
+                </tr>
+                <tr>
+                    <td>Ciclismo de ruta</td>
+                    <td>Carreteras pavimentadas</td>
+                    <td>Media</td>
+                </tr>
+                <tr>
+                    <td>Ciclismo de montaña</td>
+                    <td>Senderos y montañas</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>BMX</td>
+                    <td>Pistas y circuitos</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>Ciclismo urbano</td>
+                    <td>Calles de la ciudad</td>
+                    <td>Baja</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script src="JS_1/menu.js"></script>
+
+    <script>
+    document.getElementById('registrarBtn').addEventListener('click', function () {
+        const token = localStorage.getItem('jwt_token');
+        if (!token) {
+            // Si no hay token, redirige al login
+            window.location.href = 'CONTENEDORES_1/login.html';
+        } else {
+            // Si hay token, permite ir al formulario
+            window.location.href = 'CONTENEDORES_1/formulario.html';
+        }
+    });
+</script>
+
+
+</body>
+</html>

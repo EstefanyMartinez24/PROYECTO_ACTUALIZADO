@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Experiencia</title>
+    <link rel="stylesheet" href="../ESTILOS_1/est_formulario.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#">Registrar Experiencia</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Registra tu Experiencia en Ciclismo</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <form id="cyclingForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+                <label for="tipo_bicicleta">Tipo de Bicicleta:</label>
+                <select id="tipo_bicicleta" required>
+                    <option value="">--Selecciona una opción--</option>
+                    <option value="BMX">BMX</option>
+                    <option value="Montaña">Montaña</option>
+                    <option value="Urbana">Urbana</option>
+                    <option value="Ruta">Ruta</option>
+                </select>
+
+                <label for="nivel">Nivel:</label>
+                <select id="nivel" required>
+                    <option value="">--Selecciona tu nivel--</option>
+                    <option value="Principiante">Principiante</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                    <option value="Experto">Experto</option>
+                </select>
+
+                <button type="submit">Registrar</button>
+                <button type="button" id="cancelarEdicionBtn" style="display:none;">Cancelar edición</button>
+
+            </form>
+        </section>
+
+        <section class="api-section">
+            <h2>Usuarios de la API</h2>
+            <button id="cargarUsuariosBtn">Cargar Usuarios</button>
+            <ul id="usuarios"></ul>
+        </section>
+        
+    </main>
+
+    <script src="../JS_1/formulario.js"></script>
+</body>
+</html>

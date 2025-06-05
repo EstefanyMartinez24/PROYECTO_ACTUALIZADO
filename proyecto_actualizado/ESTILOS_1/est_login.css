@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, blue, white);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del login */
+.login-container {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Título centrado */
+.login-container h1 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Etiquetas */
+.login-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Campos de entrada */
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Botón */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1f4037;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: blue;
+}
